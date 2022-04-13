@@ -120,8 +120,10 @@ class Game:
         """
         if self._game_running:
             raise GameError('Game is running')
-        self._punto = Punto(self._shoe.draw_cards(2))
-        self._banco = Banco(self._shoe.draw_cards(2))
+        self._punto = Punto(self._shoe.draw_cards(1))
+        self._banco = Banco(self._shoe.draw_cards(1))
+        self._punto = Punto(self._shoe.draw_cards(1))
+        self._banco = Banco(self._shoe.draw_cards(1))
         self._game_running = True
 
     def is_natural(self):
